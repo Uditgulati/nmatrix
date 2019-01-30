@@ -3,22 +3,21 @@ os:
   - linux
 env:
   - USE_ATLAS=1       # This configuration installs ATLAS, builds and tests the nmatrix, nmatrix-atlas, and nmatrix-lapacke gems
+
 rvm:
   - 2.0.0-p648
   - 2.1.8
   - 2.2.4
   - 2.3.0
   - 2.4.2
+  - 2.5.2
+  - 2.6.1
   - ruby-head
   - 2.3.0-clang
   - ruby-head-clang
-  # JRuby versions --- experimental, pending merging Prasun's GSoC project.
   - jruby-9.0.5.0 # earliest supported version (uncomment when jruby-head is passing)
   - jruby-head    # latest supported JRuby
-  # Make sure to add exclude lines for new JRuby versions below.
 
 before_install: ./travis.sh before_install
-
 install: ./travis.sh install
-
 script: ./travis.sh script
