@@ -4,7 +4,7 @@ cache: bundler
 os:
   - linux
   - osx
-osx_image: xcode7.2
+osx_image: xcode9.2
 env:
   - USE_ATLAS=1       # This configuration installs ATLAS, builds and tests the nmatrix, nmatrix-atlas, and nmatrix-lapacke gems
   - USE_OPENBLAS=1    # Installs OpenBLAS and reference LAPACK, builds and tests nmatrix, nmatrix-lapacke
