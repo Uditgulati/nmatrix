@@ -45,12 +45,12 @@ then
       rbenv install --verbose $ruby_version
     )
 
-    gem pristine --all
-    gem update --no-document --system
-    gem update --no-document
+    yes | gem pristine --all
+    yes | gem update --no-document --system
+    yes | gem update --no-document
   fi
 
-  gem install --no-document bundler -v '~> 1.6'
+  yes | gem install --no-document bundler -v '~> 1.6'
 
   if [ -n "$USE_ATLAS" ]
   then
