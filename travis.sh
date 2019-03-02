@@ -79,7 +79,7 @@ then
         sudo apt-get install -y liblapack-dev
         ;;
       osx)
-        brew install homebrew/science/openblas
+        brew install homebrew/core/openblas
         ;;
     esac
   fi
