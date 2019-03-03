@@ -80,50 +80,72 @@ matrix:
     # The latest stable and head versions of ruby built by clang on OSX
     - os: osx
       compiler: clang
-      rvm: 2.2
+      rvm: ruby-head-clang
       env:
-        - ruby_version=2.4.0-dev USE_OPENBLAS=1
+        - ruby_version=2.5.0 USE_OPENBLAS=1 CC=clang CXX=clang++
     - os: osx
       compiler: clang
-      rvm: 2.2
+      rvm: ruby-head-clang
       env:
-        - ruby_version=2.4.0-dev NO_EXTERNAL_LIB=1
+        - ruby_version=2.5.0 NO_EXTERNAL_LIB=1 CC=clang CXX=clang++
+    # The latest version of Ruby 2.4.x built by clang on OSX
     - os: osx
       compiler: clang
-      rvm: 2.2
+      rvm: 2.4.1-clang
       env:
-        - ruby_version=2.3.0 USE_OPENBLAS=1
+        - ruby_version=2.4.1 USE_OPENBLAS=1 CC=clang CXX=clang++
     - os: osx
       compiler: clang
-      rvm: 2.2
+      rvm: 2.4.1-clang
       env:
-        - ruby_version=2.3.0 NO_EXTERNAL_LIB=1
+        - ruby_version=2.4.1 NO_EXTERNAL_LIB=1 CC=clang CXX=clang++
+    # The latest version of Ruby 2.3.x built by clang on OSX
+    - os: osx
+      compiler: clang
+      rvm: 2.3.4-clang
+      env:
+        - ruby_version=2.3.4 USE_OPENBLAS=1 CC=clang CXX=clang++
+    - os: osx
+      compiler: clang
+      rvm: 2.3.4-clang
+      env:
+        - ruby_version=2.3.4 NO_EXTERNAL_LIB=1 CC=clang CXX=clang++
     # The latest version of Ruby 2.2.x built by clang on OSX
     - os: osx
       compiler: clang
-      rvm: 2.2
+      rvm: 2.2.7-clang
       env:
-        - ruby_version=2.2.4 USE_OPENBLAS=1
+        - ruby_version=2.2.7 USE_OPENBLAS=1 CC=clang CXX=clang++
+    - os: osx
+      compiler: clang
+      rvm: 2.2.7-clang
+      env:
+        - ruby_version=2.2.7 NO_EXTERNAL_LIB=1 CC=clang CXX=clang++
     # The latest version of Ruby 2.1.x built by clang on OSX
     - os: osx
       compiler: clang
-      rvm: 2.2
+      rvm: 2.1.10-clang
       env:
-        - ruby_version=2.1.8 USE_OPENBLAS=1
+        - ruby_version=2.1.10 USE_OPENBLAS=1 CC=clang CXX=clang++
+    - os: osx
+      compiler: clang
+      rvm: 2.1.10-clang
+      env:
+        - ruby_version=2.1.10 NO_EXTERNAL_LIB=1 CC=clang CXX=clang++
   allow_failures:
     # trunk
     - rvm: ruby-head
     - rvm: ruby-head-clang
     - os: osx
       compiler: clang
-      rvm: 2.2
+      rvm: 2.5
       env:
-        - ruby_version=2.4.0-dev USE_OPENBLAS=1
+        - ruby_version=2.5.0 USE_OPENBLAS=1 CC=clang CXX=clang++
     - os: osx
       compiler: clang
-      rvm: 2.2
+      rvm: 2.5
       env:
-        - ruby_version=2.4.0-dev NO_EXTERNAL_LIB=1
+        - ruby_version=2.5.0 NO_EXTERNAL_LIB=1 CC=clang CXX=clang++
 
 notifications:
   irc: "chat.freenode.net#sciruby"
