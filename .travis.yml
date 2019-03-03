@@ -49,7 +49,7 @@ matrix:
       env: USE_OPENBLAS=1
     - rvm: jruby-9.0.5.0
       env: USE_REF=1    
-    # NOTE: The following two ruby versions on OSX are currently unavailable
+    # NOTE: The following ruby versions on OSX are currently unavailable
     - os: osx
       rvm: 2.0.0-p648
     - os: osx
@@ -64,6 +64,10 @@ matrix:
       rvm: 2.3.0-clang
     - os: osx
       rvm: ruby-head-clang
+    # NOTE: The following ruby versions are GCC are we don't want to do
+    #       these ones with osx, which has clang.
+    - os: osx
+      rvm: 2.4.2
     # FIXME: The following configuration is unavailable because ATLAS should be built from source.
     #        We need homebrew formula for ATLAS and its bottle.
     - os: osx
