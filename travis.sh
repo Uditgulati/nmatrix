@@ -46,11 +46,11 @@ then
     )
 
     yes | gem pristine --all
-    yes | gem update --no-document --system
-    yes | gem update --no-document
+    yes | gem update --no-document --system --force
+    yes | gem update --no-document --force
   fi
 
-  yes | gem install --no-document bundler -v '~> 1.6'
+  yes | gem install --no-document bundler -v '~> 1.6' --force
 
   if [ -n "$USE_ATLAS" ]
   then
