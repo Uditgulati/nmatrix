@@ -49,7 +49,9 @@ then
     yes | gem update --no-document --system --force
     yes | gem update --no-document --force
 
-    if [ "$ruby_version" == "2.2.7" ] || [ "$ruby_version" == "2.1.10" ]; then
+    echo $TRAVIS_RUBY_VERSION
+
+    if [ $TRAVIS_RUBY_VERSION == '2.2.7-clang' ] || [ $TRAVIS_RUBY_VERSION == '2.1.10-clang' ]; then
       yes | gem uninstall bundler --force
     fi
   fi
