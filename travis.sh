@@ -48,7 +48,13 @@ then
     yes | gem pristine --all
     yes | gem update --no-document --system --force
     yes | gem update --no-document --force
+
+    if [ "$ruby_version" == "2.2.7" ] || [ "$ruby_version" == "2.1.10" ]; then
+      yes | gem uninstall bundler --force
+    fi
   fi
+
+  
 
   yes | gem install --no-document bundler -v '~> 1.6' --force
 
